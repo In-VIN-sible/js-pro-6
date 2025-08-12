@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/just-validate@4.2.0/dist/css/just-validate.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+      padding-top: 40px;
+    }
+    .wrapper {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+    .form__title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form__group {
+      
+      margin-bottom: 15px;
+      width: 60%;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+      border-color: #007bff;
+    
+    }
+    .just-validate-error-label {
+      color: #d93025;
+      font-size: 13px;
+      margin-top: 5px;
+      display: block;
+    }
+    .just-validate-error-field {
+      border-color: #d93025 ;
+    }
+    button {
+       width: 65%;
+      margin-left: 65px;
+      padding: 10px;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+     
+    }
+    button:hover {
+      background: #0056b3;
+       
+    }
+   label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <form action="" id="registerForm" novalidate>
+    <h2 class="form__title">Register List</h2>
+
+    <div class="form__group">
+      <input type="text" placeholder="Name" id="registerForm__name">
+    </div>
+    <div class="form__group">
+      <input type="email" placeholder="Email" id="registerForm__email">
+    </div>
+    <div class="form__group">
+      <input type="password" placeholder="Password" id="registerForm__password">
+    </div>
+    <div class="form__group">
+      <input type="password" placeholder="Confirm password" id="registerForm__ConfirmPassword">
+    </div>
+
+    <div class="form__group">
+      <textarea placeholder="Message" id="registerForm__message"></textarea>
+    </div>
+
+    <div class="form__group">
+      <select id="registerForm__animal">
+        <option value=""> Select your car(bibika)</option>
+        <option value="dog">MClaren</option>
+        <option value="cat">Sponge Bob's car </option>
+        <option value="parrot">lanos</option>
+      </select>
+    </div>
+
+    <div class="form__group">
+      <label>
+        <input type="checkbox" id="registerForm__consent"> I agree to provide my data
+      </label>
+    </div>
+
+    <p>Please select at least 1 option</p>
+<div class="form__group">
+  <label>
+    <input type="checkbox" name="news" value="email">
+   receive by email
+  </label><br>
+  
+  <label>
+    <input type="checkbox" name="news" value="sms">
+    receive by SMS
+  </label>
+</div>
+
+<p>Preferred way for communication:</p>
+<div class="form__group">
+  <label>
+    <input type="radio" name="communication" value="email">
+    Email
+  </label><br>
+  <label>
+    <input type="radio" name="communication" value="text">
+    Text message
+  </label>
+</div>
+<div class="form__group">
+  <input type="number" id="registerForm__anyNumber" placeholder="Input any number" max="10">
+</div>
+
+<div class="form__group">
+  <input type="number" id="registerForm__integerNumber" placeholder="Input an integer number" max="10">
+</div>
+
+<div class="form__group">
+  <input type="number" id="registerForm__numberRange" placeholder="Input a number " max="10">
+</div>
+
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/just-validate@4.2.0/dist/just-validate.production.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
